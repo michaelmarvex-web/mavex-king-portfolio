@@ -314,12 +314,15 @@ h2{font-size:36px;line-height:1.1}
 .gallery img {
   display: block;
   width: 100%;
-  height: 380px;
+  height: auto;
   object-fit: contain;
   background: #0c0c0b;
   transition: transform 0.35s ease;
 }
 
+.gallery figure:hover img {
+  transform: scale(1.02);
+}
 .gallery figure:hover img {
   transform: scale(1.02);
   }
