@@ -240,7 +240,182 @@ h2{font-size:36px;line-height:1.1}
 
 
 footer{padding:25px 0;color:#aaa;border-top:1px solid #383632;font-size:13px}
-</style>
+/* TIKTOK-INSPIRED CHARACTER PROCESS */
+#character-process > p {
+  max-width: 600px;
+  margin-bottom: 32px;
+}
+
+.process-phone {
+  width: 100%;
+  max-width: 430px;
+  margin: 35px auto 10px;
+  padding: 14px;
+  background: #171715;
+  border: 1px solid #383632;
+  border-radius: 22px;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.process-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.process-top span:last-child {
+  color: #f07845;
+  text-align: right;
+  font-size: 9px;
+}
+
+.process-progress {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 12px;
+}
+
+.process-progress span {
+  flex: 1;
+  height: 3px;
+  border-radius: 10px;
+  background: #45433e;
+  transition: background 0.2s ease;
+}
+
+.process-progress span.active {
+  background: #f07845;
+}
+
+.process-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  border-radius: 12px;
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+.process-track::-webkit-scrollbar {
+  display: none;
+}
+
+.process-slide {
+  flex: 0 0 100%;
+  min-width: 0;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  background: #20201d;
+  overflow: hidden;
+}
+
+.process-slide img {
+  display: block;
+  width: 100%;
+  height: 390px;
+  object-fit: contain;
+  background: #111110;
+}
+
+.process-caption {
+  padding: 18px 16px 20px;
+}
+
+.process-caption small {
+  font-size: 9px;
+  letter-spacing: 1.5px;
+}
+
+.process-caption h3 {
+  margin: 10px 0 7px;
+  font-size: 23px;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+
+.process-caption p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.process-commission {
+  display: inline-block;
+  margin-top: 18px;
+  color: #f07845;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+.process-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 2px 5px;
+}
+
+.process-controls button {
+  width: 42px;
+  height: 42px;
+  border: 1px solid #625d54;
+  border-radius: 50%;
+  background: transparent;
+  color: #f0eee8;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.process-controls button:hover {
+  border-color: #f07845;
+  color: #f07845;
+}
+
+#processCount {
+  color: #b9b6ae;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.process-hint {
+  margin: 10px 0 2px;
+  text-align: center;
+  color: #8c8981;
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+.process-hint span {
+  color: #f07845;
+  margin-left: 5px;
+}
+
+@media (max-width: 500px) {
+  .process-phone {
+    padding: 10px;
+    border-radius: 17px;
+  }
+
+  .process-slide img {
+    height: 340px;
+  }
+
+  .process-caption {
+    padding: 15px 12px 18px;
+  }
+
+  .process-caption h3 {
+    font-size: 21px;
+  }
+  }</style>
 </head>
 <body>
 <main>
@@ -332,7 +507,72 @@ footer{padding:25px 0;color:#aaa;border-top:1px solid #383632;font-size:13px}
   </div>
 </section>
 
-<section>
+<section id="character-process">
+  <small>03 — INSIDE THE PROCESS</small>
+  <h2>Watch an idea take shape.</h2>
+  <p>From the first rough lines to the final details. Swipe through the stages and see how the character comes to life.</p>
+
+  <div class="process-phone">
+    <div class="process-top">
+      <span>MAVEX KING.</span>
+      <span>CHARACTER STUDY / 001</span>
+    </div>
+
+    <div class="process-progress" aria-label="Artwork progress">
+      <span class="active"></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <div class="process-track" id="processTrack">
+      <article class="process-slide">
+        <img src="Lumii_20261012_180419502.jpg" alt="Original character rough sketch">
+        <div class="process-caption">
+          <small>01 / THE BEGINNING</small>
+          <h3>Every character starts somewhere.</h3>
+          <p>The first lines. The first idea. Nothing is fixed yet.</p>
+        </div>
+      </article>
+
+      <article class="process-slide">
+        <img src="Lumii_20261012_180437324.jpg" alt="Original character clean line art">
+        <div class="process-caption">
+          <small>02 / FINDING THE SHAPE</small>
+          <h3>The idea gets clearer.</h3>
+          <p>Shapes become decisions. The character begins to hold together.</p>
+        </div>
+      </article>
+
+      <article class="process-slide">
+        <img src="Lumii_20261012_180447225.jpg" alt="Original character base colours and rendering">
+        <div class="process-caption">
+          <small>03 / BUILDING THE WORLD</small>
+          <h3>Colour changes everything.</h3>
+          <p>Light, tone and colour give the design a stronger presence.</p>
+        </div>
+      </article>
+
+      <article class="process-slide">
+        <img src="Lumii_20261012_181553025.jpg" alt="Finished original character artwork">
+        <div class="process-caption">
+          <small>04 / THE FINAL FORM</small>
+          <h3>Now it feels alive.</h3>
+          <p>An idea becomes something you can actually see.</p>
+          <a class="process-commission" href="#contact">HAVE A CHARACTER IN MIND? ↗</a>
+        </div>
+      </article>
+    </div>
+
+    <div class="process-controls">
+      <button type="button" id="processPrev" aria-label="Previous slide">←</button>
+      <span id="processCount">01 / 04</span>
+      <button type="button" id="processNext" aria-label="Next slide">→</button>
+    </div>
+
+    <p class="process-hint">SWIPE TO EXPLORE <span>↔</span></p>
+  </div>
+</section><section>
 <small>02 — ABOUT</small>
 
 <h2>Images with something behind them.</h2>
@@ -448,5 +688,54 @@ footer{padding:25px 0;color:#aaa;border-top:1px solid #383632;font-size:13px}
 
 <footer>© 2026 Mavex King · Independent by nature. Curious by design.</footer>
 </main>
+<script>
+(function () {
+  const track = document.getElementById('processTrack');
+  const slides = Array.from(document.querySelectorAll('.process-slide'));
+  const bars = Array.from(document.querySelectorAll('.process-progress span'));
+  const count = document.getElementById('processCount');
+  const prev = document.getElementById('processPrev');
+  const next = document.getElementById('processNext');
+
+  if (!track || !slides.length || !count || !prev || !next) return;
+
+  function currentIndex() {
+    const width = track.clientWidth || 1;
+    return Math.max(
+      0,
+      Math.min(slides.length - 1, Math.round(track.scrollLeft / width))
+    );
+  }
+
+  function update() {
+    const index = currentIndex();
+
+    count.textContent =
+      String(index + 1).padStart(2, '0') +
+      ' / ' +
+      String(slides.length).padStart(2, '0');
+
+    bars.forEach((bar, i) => {
+      bar.classList.toggle('active', i <= index);
+    });
+  }
+
+  function goTo(index) {
+    const target = Math.max(0, Math.min(slides.length - 1, index));
+
+    track.scrollTo({
+      left: target * track.clientWidth,
+      behavior: 'smooth'
+    });
+  }
+
+  prev.addEventListener('click', () => goTo(currentIndex() - 1));
+  next.addEventListener('click', () => goTo(currentIndex() + 1));
+  track.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update);
+
+  update();
+})();
+  </script>
 </body>
 </html>
