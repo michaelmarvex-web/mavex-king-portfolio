@@ -85,6 +85,90 @@ a{color:#f07845}
   border-color: #f07845;
 }
 
+.idea-journey {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr;
+  align-items: center;
+  gap: 12px;
+  margin: 38px 0 55px;
+}
+
+.idea-stage {
+  min-width: 0;
+  text-align: center;
+}
+
+.idea-art {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+  max-width: 190px;
+  margin: 0 auto 18px;
+  padding: 16px;
+  background: linear-gradient(145deg, #20201d, #151514);
+  border: 1px solid #383632;
+}
+
+.idea-stage small {
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.idea-stage p {
+  margin: 8px auto 0;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.idea-connector {
+  color: #f07845;
+  font-size: 22px;
+  padding-bottom: 42px;
+}
+
+.inquiry-copy {
+  padding-top: 30px;
+  border-top: 1px solid #383632;
+}
+
+.inquiry-copy h2 {
+  margin-bottom: 14px;
+}
+
+.inquiry-services {
+  margin-top: 22px;
+  font-size: 11px;
+  letter-spacing: 1.3px;
+  line-height: 1.8;
+}
+
+@media (max-width: 500px) {
+  .idea-journey {
+    gap: 5px;
+    margin: 30px 0 40px;
+  }
+
+  .idea-art {
+    padding: 8px;
+    margin-bottom: 12px;
+  }
+
+  .idea-stage small {
+    font-size: 8px;
+    letter-spacing: .5px;
+  }
+
+  .idea-stage p {
+    font-size: 11px;
+  }
+
+  .idea-connector {
+    font-size: 16px;
+    padding-bottom: 38px;
+  }
+}
+
 
 section{padding:45px 0;border-top:1px solid #383632}
 h2{font-size:36px;line-height:1.1}
@@ -256,28 +340,110 @@ footer{padding:25px 0;color:#aaa;border-top:1px solid #383632;font-size:13px}
 <p>This portfolio is an evolving archive of my work and the ideas I'm building toward.</p>
 </section>
 
+
 <section id="contact">
-  <small>03 — CONTACT</small>
-  <h2>Let's build something meaningful.</h2>
+  <small>03 — FROM IDEA TO REALITY</small>
+
+  <h2>Every world starts somewhere.</h2>
 
   <p>
-    Available for illustration commissions, character design,
-    visual development, and creative collaborations.
+    Maybe it's a character you've imagined, a world you've
+    been trying to picture, or an idea you can't quite
+    explain yet. Let's find out what it could become.
   </p>
 
-  <div class="contact-links">
-    <a class="button" href="mailto:Chimamarvex@gmail.com">
-      EMAIL ME ↗
-    </a>
+  <div class="idea-journey">
 
-    <a class="button whatsapp"
-       href="https://wa.me/2347045382139"
-       target="_blank"
-       rel="noopener noreferrer">
-      CONTACT ON WHATSAPP ↗
-    </a>
+    <div class="idea-stage">
+      <div class="idea-art">
+        <svg viewBox="0 0 100 100" width="100%" aria-label="An idea represented by a glowing lightbulb" role="img">
+          <path d="M50 12 C32 12 22 26 27 43 C30 51 39 57 40 65 H60 C61 57 70 51 73 43 C78 26 68 12 50 12Z"
+            fill="none" stroke="#f07845" stroke-width="2.5"/>
+          <path d="M40 70 H60 M42 76 H58 M45 82 H55"
+            stroke="#f07845" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M50 2 V7 M16 20 L22 25 M84 20 L78 25 M9 48 H17 M83 48 H91"
+            stroke="#f07845" stroke-width="2" stroke-linecap="round"/>
+          <path d="M42 35 Q50 26 58 35 L53 47 H47Z"
+            fill="#f07845" opacity=".25"/>
+        </svg>
+      </div>
+      <small>01 — THE IDEA</small>
+      <p>It begins with a thought.</p>
+    </div>
+
+    <div class="idea-connector" aria-hidden="true">→</div>
+
+    <div class="idea-stage">
+      <div class="idea-art">
+        <svg viewBox="0 0 100 100" width="100%" aria-label="A rough character concept sketch" role="img">
+          <path d="M24 77 L27 36 L43 18 L64 24 L77 49 L72 78"
+            fill="none" stroke="#b9b6ae" stroke-width="1.5" stroke-dasharray="4 4"/>
+          <path d="M29 72 L33 39 L46 27 L62 29 L70 49 L66 73 L29 72Z"
+            fill="none" stroke="#f07845" stroke-width="2"/>
+          <path d="M33 39 L51 50 L62 29 M51 50 L48 70 M33 39 L29 72 M51 50 L70 49"
+            fill="none" stroke="#b9b6ae" stroke-width="1.2"/>
+          <path d="M18 83 L77 83 M37 19 L32 14 M66 22 L73 16"
+            fill="none" stroke="#f07845" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <small>02 — THE PROCESS</small>
+      <p>We explore what it could be.</p>
+    </div>
+
+    <div class="idea-connector" aria-hidden="true">→</div>
+
+    <div class="idea-stage">
+      <div class="idea-art">
+        <svg viewBox="0 0 100 100" width="100%" aria-label="A finished stylized character portrait" role="img">
+          <path d="M16 88 Q19 66 36 61 L36 53 Q23 44 27 28 Q30 12 49 12 Q70 12 73 31 Q76 46 63 54 L64 62 Q83 68 86 88Z"
+            fill="#f07845" opacity=".2"/>
+          <path d="M36 61 L36 53 Q23 44 27 28 Q30 12 49 12 Q70 12 73 31 Q76 46 63 54 L64 62"
+            fill="none" stroke="#f07845" stroke-width="2.5" stroke-linejoin="round"/>
+          <path d="M36 37 Q44 32 50 38 M57 38 L65 35 M46 49 Q51 53 57 49"
+            fill="none" stroke="#f0eee8" stroke-width="2" stroke-linecap="round"/>
+          <path d="M22 85 Q29 70 42 68 L50 78 L59 68 Q75 72 81 85"
+            fill="none" stroke="#f07845" stroke-width="2.5" stroke-linejoin="round"/>
+          <path d="M42 68 L50 78 L59 68"
+            fill="none" stroke="#f0eee8" stroke-width="1.5"/>
+          <path d="M21 24 L14 19 M78 20 L85 15 M82 44 H90"
+            stroke="#f07845" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <small>03 — THE RESULT</small>
+      <p>An idea you can finally see.</p>
+    </div>
+
+  </div>
+
+  <div class="inquiry-copy">
+    <h2>Have something in mind?</h2>
+
+    <p>
+      Bring me the rough idea, the reference, or even just
+      the feeling you're trying to capture. We'll work
+      toward a visual that gives it shape and identity.
+    </p>
+
+    <p class="inquiry-services">
+      CHARACTER DESIGN · CONCEPT ART · ILLUSTRATION
+    </p>
+
+    <div class="contact-links">
+      <a class="button"
+         href="mailto:Chimamarvex@gmail.com?subject=Creative%20Project%20Inquiry&amp;body=Hi%20Mavex%2C%0A%0AI%27m%20interested%20in%20working%20with%20you.%0A%0AProject%20type%3A%0AProject%20idea%3A%0AWhat%20I%20need%3A%0A%0A">
+        START A PROJECT INQUIRY ↗
+      </a>
+
+      <a class="button whatsapp"
+         href="https://wa.me/2347045382139?text=Hi%20Mavex%2C%20I%27m%20interested%20in%20discussing%20a%20creative%20project."
+         target="_blank"
+         rel="noopener noreferrer">
+        LET'S TALK ON WHATSAPP ↗
+      </a>
+    </div>
   </div>
 </section>
+
 
 
 <footer>© 2026 Mavex King · Independent by nature. Curious by design.</footer>
