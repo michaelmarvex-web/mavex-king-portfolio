@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Artwork Gallery — Mavex King</title>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #111110;
+  color: #f0eee8;
+  font-family: Arial, sans-serif;
+  line-height: 1.7;
+}
+
+header {
+  padding: 24px 7%;
+  border-bottom: 1px solid #383632;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
+a {
+  color: #f07845;
+  text-decoration: none;
+}
+
+main {
+  max-width: 1250px;
+  margin: auto;
+  padding: 65px 6%;
+}
+
+.eyebrow {
+  color: #f07845;
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+h1 {
+  max-width: 850px;
+  margin: 18px 0;
+  font-size: clamp(44px, 9vw, 86px);
+  line-height: 1;
+  letter-spacing: -3px;
+}
+
+.intro {
+  max-width: 620px;
+  color: #b9b6ae;
+  margin-bottom: 45px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 35px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+figure {
+  margin: 0;
+  padding: 12px;
+  background: linear-gradient(145deg, #20201d, #141413);
+  border: 1px solid #383632;
+  transition: border-color .25s ease, transform .25s ease;
+}
+
+figure:hover {
+  border-color: #f07845;
+  transform: translateY(-4px);
+}
+
+figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #0c0c0b;
+}
+
+figcaption {
+  padding: 15px 4px 4px;
+  color: #f0ede6;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+footer {
+  padding: 25px 7%;
+  border-top: 1px solid #383632;
+  color: #aaa;
+  font-size: 13px;
+}
+
+@media (max-width: 650px) {
+  main {
+    padding: 45px 5%;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  h1 {
+    letter-spacing: -2px;
+  }
+}
+</style>
+</head>
+
+<body>
+<header>
+  MAVEX KING<span style="color:#f07845">.</span>
+</header>
+
+<main>
+  <a class="back-link" href="index.html">← BACK TO PORTFOLIO</a>
+
+  <div class="eyebrow">THE ARTWORK ARCHIVE</div>
+  <h1>A closer look at the worlds I create.</h1>
+
+  <p class="intro">
+    Character designs, illustrations, visual experiments and ideas
+    from my creative practice. Each piece is a glimpse into a world
+    still taking shape.
+  </p>
+
+  <div class="gallery">
+
+    <figure>
+      <img src="Lumii_20261011_021859623.jpg"
+           alt="The Signal character model sheet">
+      <figcaption>The Signal — Character Design</figcaption>
+    </figure>
+
+    <figure>
+      <img src="Lumii_20260902_195852278.jpg"
+           alt="Against the Dying Light character artwork">
+      <figcaption>Against the Dying Light</figcaption>
+    </figure>
+
+    <figure>
+      <img src="Untitled14_20261011052219.png"
+           alt="A World of My Own character illustration">
+      <figcaption>A World of My Own</figcaption>
+    </figure>
+
+  </div>
+</main>
+
+<footer>
+  © Mavex King — Artist, Filmmaker & Visual Storyteller
+</footer>
+</body>
+</html>
