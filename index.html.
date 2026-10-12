@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mavex King — Artist & Visual Storyteller</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#111110;color:#f0eee8;font-family:Arial,sans-serif;line-height:1.6}
+main{max-width:1000px;margin:auto;padding:28px 6%}
+header{padding:20px 0;border-bottom:1px solid #383632;letter-spacing:3px;font-weight:bold}
+.orange{color:#f07845}
+.hero{padding:90px 0 75px}
+small{color:#f07845;letter-spacing:3px;text-transform:uppercase}
+h1{font-size:clamp(46px,10vw,88px);line-height:1;margin:22px 0;letter-spacing:-3px}
+p{color:#b9b6ae;max-width:650px}
+a{color:#f07845}
+.button{display:inline-block;margin-top:20px;padding:12px 18px;background:#f07845;color:#111;text-decoration:none;font-weight:bold}
+section{padding:45px 0;border-top:1px solid #383632}
+h2{font-size:36px;line-height:1.1}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.card{background:#1c1c19;border:1px solid #383632;padding:24px;min-height:180px}
+.card h3{font-size:23px}
+footer{padding:25px 0;color:#aaa;border-top:1px solid #383632;font-size:13px}
+</style>
+</head>
+<body>
+<main>
+<header>MAVEX KING<span class="orange">.</span></header>
+<div class="hero">
+<small>Artist · Visual storyteller · Creative director</small>
+<h1>Building worlds.<br>Finding the story.</h1>
+<p>I create characters, develop visual worlds, and explore stories through illustration, concept art, film and animation.</p>
+<a class="button" href="#work">EXPLORE MY WORK ↘</a>
+</div>
+<section id="work">
+<small>01 — SELECTED WORK</small>
+<h2>Ideas becoming worlds.</h2>
+<div class="grid">
+<div class="card"><small>WORLD-BUILDING</small><h3>NØ!SE</h3><p>A psychological science-fiction universe exploring mental noise, attention and the search for signal.</p></div>
+<div class="card"><small>ILLUSTRATION</small><h3>Character & Concept Art</h3><p>Original characters and visual concepts built around emotion, atmosphere and story.</p></div>
+<div class="card"><small>MOVING IMAGE</small><h3>Film & Animation</h3><p>Experiments in cinematic storytelling, animation and imagined worlds.</p></div>
+<div class="card"><small>INDEPENDENT PRACTICE</small><h3>Visual Studies</h3><p>Sketches, explorations and unfinished ideas from an evolving creative practice.</p></div>
+</div>
+</section>
+<section>
+<small>02 — ABOUT</small>
+<h2>Images with something behind them.</h2>
+<p>My practice sits at the intersection of character design, visual development and filmmaking. I'm interested in the details that make a character feel real, a place feel lived in, or a story stay with you.</p>
+<p>This portfolio is an evolving archive of my work and the ideas I'm building toward.</p>
+</section>
+<section id="contact">
+<small>03 — CONTACT</small>
+<h2>Let's build something meaningful.</h2>
+<p>Open to freelance commissions, creative collaborations and selected projects.</p>
+<p>Replace the placeholder email below with your own before sharing your site.</p>
+<a class="button" href="mailto:YOUR-EMAIL@example.com">GET IN TOUCH ↗</a>
+</section>
+<footer>© 2026 Mavex King · Independent by nature. Curious by design.</footer>
+</main>
+</body>
+</html>
