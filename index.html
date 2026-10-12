@@ -21,6 +21,34 @@ h2{font-size:36px;line-height:1.1}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
 .card{background:#1c1c19;border:1px solid #383632;padding:24px;min-height:180px}
 .card h3{font-size:23px}
+  
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.gallery figure {
+  margin: 0;
+  background: #1c1c19;
+  border: 1px solid #383632;
+}
+
+.gallery img {
+  display: block;
+  width: 100%;
+  height: 320px;
+  object-fit: contain;
+  background: #111110;
+}
+
+.gallery figcaption {
+  padding: 12px;
+  color: #b9b6ae;
+  font-size: 13px;
+}
+
 footer{padding:25px 0;color:#aaa;border-top:1px solid #383632;font-size:13px}
 </style>
 </head>
@@ -42,9 +70,35 @@ footer{padding:25px 0;color:#aaa;border-top:1px solid #383632;font-size:13px}
 <div class="card"><small>MOVING IMAGE</small><h3>Film & Animation</h3><p>Experiments in cinematic storytelling, animation and imagined worlds.</p></div>
 <div class="card"><small>INDEPENDENT PRACTICE</small><h3>Visual Studies</h3><p>Sketches, explorations and unfinished ideas from an evolving creative practice.</p></div>
 </div>
+
 </section>
+
+<section id="gallery">
+  <small>01.5 — ARTWORK ARCHIVE</small>
+  <h2>Selected visual work.</h2>
+  <p>A collection of characters, images and ideas from my creative practice.</p>
+
+  <div class="gallery">
+    <figure>
+      <img src="Lumii_20261011_021859623.jpg" alt="Artwork by Mavex King">
+      <figcaption>Visual Study 01</figcaption>
+    </figure>
+
+    <figure>
+      <img src="Lumii_20260902_195852278.jpg" alt="Artwork by Mavex King">
+      <figcaption>Visual Study 02</figcaption>
+    </figure>
+
+    <figure>
+      <img src="Untitled14_20261011052219.png" alt="Artwork by Mavex King">
+      <figcaption>Character & Concept Art</figcaption>
+    </figure>
+  </div>
+</section>
+
 <section>
 <small>02 — ABOUT</small>
+
 <h2>Images with something behind them.</h2>
 <p>My practice sits at the intersection of character design, visual development and filmmaking. I'm interested in the details that make a character feel real, a place feel lived in, or a story stay with you.</p>
 <p>This portfolio is an evolving archive of my work and the ideas I'm building toward.</p>
