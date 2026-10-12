@@ -7,13 +7,32 @@
 <style>
 *{box-sizing:border-box}
 body{margin:0;background:#111110;color:#f0eee8;font-family:Arial,sans-serif;line-height:1.6}
-main{max-width:1000px;margin:auto;padding:28px 6%}
-header{padding:20px 0;border-bottom:1px solid #383632;letter-spacing:3px;font-weight:bold}
+
+main {
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 6% 28px;
+}
+
+
+header {
+  position: absolute;
+  top: 28px;
+  left: 6%;
+  right: 6%;
+  z-index: 10;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(240, 238, 232, 0.25);
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
 .orange{color:#f07845}
 
 
 .hero {
-  position: relative;
+  position: relative;margin-top: 0;
+top: 0;
   width: 100vw;
   min-height: 100vh;
   min-height: 100svh;
@@ -35,8 +54,7 @@ header{padding:20px 0;border-bottom:1px solid #383632;letter-spacing:3px;font-we
 }
 
 .hero h1 {
-  position: relative;margin-top: 0;
-top: 0;
+  position: relative;
   max-width: 850px;
   font-size: clamp(48px, 8vw, 100px);
   line-height: .98;
