@@ -1,929 +1,552 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Mavex King — Artist & Visual Storyteller</title>
-<style>
-
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  background: #111110;
-  color: #f0eee8;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  overflow-x: clip;
-}
-
-
-main {
-  max-width: 1000px;
-  margin: auto;
-  padding: 0 6% 28px;
-}
-
-
-header {
-  position: absolute;
-  top: 28px;
-  left: 6%;
-  right: 6%;
-  z-index: 10;
-  padding: 20px 0;
-  border-bottom: 1px solid rgba(240, 238, 232, 0.25);
-  letter-spacing: 3px;
-  font-weight: bold;
-}
-
-.orange{color:#f07845}
-
-
-
-.hero {
-  position: relative;
-  margin-top: 0;
-  width: 100%;
-  margin-left: 0;
-  min-height: 100vh;
-  min-height: 100svh;
-  padding: 110px 8% 38px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  isolation: isolate;
-  overflow: hidden;
-  background-image:    
-    radial-gradient(ellipse at 75% 40%, rgba(240,120,69,.13), transparent 38%),
-    linear-gradient(90deg, rgba(17,17,16,.94) 0%, rgba(17,17,16,.72) 38%, rgba(17,17,16,.12) 75%),
-    linear-gradient(0deg, rgba(17,17,16,.68), transparent 35%),
-    url("file_00000000fc0c81f481c7d8368c35f055.png");
-  background-size: cover;
-  background-position: center right;
-  background-repeat: no-repeat;
-}
-
-.hero h1 {
-  position: relative;
-  max-width: 850px;
-  font-size: clamp(48px, 8vw, 100px);
-  line-height: .98;
-  letter-spacing: -4px;
-  font-weight: 800;
-  text-shadow: 0 4px 24px rgba(0, 0, 0, .28);
-  margin: 22px 0;
-}
-
-.hero p {
-  max-width: 520px;
-  font-size: 17px;
-  line-height: 1.9;
-  color: #f0eee8;
-}
-
-.hero small {
-  color: #B8BDC4;
-}
-
-.hero .button {
-  position: relative;
-}
-
-@media (max-width: 600px) {
-  .hero {
-    min-height: 100svh;
-    padding: 95px 7% 35px;
-    background-position: 62% 
-center;
-    background-image:
-      radial-gradient(ellipse at 75% 40%, rgba(184,189,196,.10), transparent 38%),
-      linear-gradient(90deg, rgba(17,17,16,.92) 0%, rgba(17,17,16,.67) 58%, rgba(17,17,16,.22) 100%),
-      linear-gradient(0deg, rgba(17,17,16,.6), transparent 45%),
-      url("file_00000000fc0c81f481c7d8368c35f055.png");
-  }
-
-  .hero h1 {
-    letter-spacing: -2px;
-    font-size: clamp(46px, 12vw, 72px);
-  }
-
-  .hero p {
-    font-size: 15px;
-    max-width: 95%;
-  }
-}
-
-
-
-small{color:#f07845;letter-spacing:3px;text-transform:uppercase}
-h1{font-size:clamp(46px,10vw,88px);line-height:1;margin:22px 0;letter-spacing:-3px}
-p{color:#b9b6ae;max-width:650px}
-a{color:#f07845}
-
-
-
-.button {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 13px 19px;
-  background: #E7E2D8;
-  color: #171819;
-  text-decoration: none;
-  font-weight: bold;
-  letter-spacing: .5px;
-  border: 1px solid #B8BDC4;
-  border-radius: 3px;
-  box-shadow: 0 4px 0 #A8A398, 0 0 12px rgba(184, 189, 196, .12), 0 8px 18px rgba(0, 0, 0, .18);
-  transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
-}
-
-.button:hover,
-.button:focus-visible {
-  background: #F2EEE6;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 0 #A8A398, 0 0 20px rgba(184, 189, 196, .22), 0 12px 22px rgba(0, 0, 0, .25);
-}
-
-.button:active {
-  transform: translateY(2px);
-  box-shadow: 0 2px 0 #A8A398, 0 4px 10px rgba(0, 0, 0, .18);
-}
-
-  
-.contact-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 20px;
-}
-
-.contact-links .button {
-  margin-top: 0;
-}
-
-.contact-links .whatsapp {
-  background: transparent;
-  color: #f0eee8;
-  border: 1px solid #625d54;
-}
-
-.contact-links .whatsapp:hover {
-  border-color: #f07845;
-}
-
-.idea-journey {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr auto 1fr;
-  align-items: center;
-  gap: 12px;
-  margin: 38px 0 55px;
-}
-
-.idea-stage {
-  min-width: 0;
-  text-align: center;
-}
-
-.idea-art {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  aspect-ratio: 1;
-  max-width: 190px;
-  margin: 0 auto 18px;
-  padding: 16px;
-  background: linear-gradient(145deg, #20201d, #151514);
-  border: 1px solid #383632;
-}
-
-.idea-stage small {
-  font-size: 10px;
-  letter-spacing: 1px;
-}
-
-.idea-stage p {
-  margin: 8px auto 0;
-  font-size: 12px;
-  line-height: 1.6;
-}
-
-.idea-connector {
-  color: #f07845;
-  font-size: 22px;
-  padding-bottom: 42px;
-}
-
-.inquiry-copy {
-  padding-top: 30px;
-  border-top: 1px solid #383632;
-}
-
-.inquiry-copy h2 {
-  margin-bottom: 14px;
-}
-
-.inquiry-services {
-  margin-top: 22px;
-  font-size: 11px;
-  letter-spacing: 1.3px;
-  line-height: 1.8;
-}
-
-@media (max-width: 500px) {
-  .idea-journey {
-    gap: 5px;
-    margin: 30px 0 40px;
-  }
-
-  .idea-art {
-    padding: 8px;
-    margin-bottom: 12px;
-  }
-
-  .idea-stage small {
-    font-size: 8px;
-    letter-spacing: .5px;
-  }
-
-  .idea-stage p {
-    font-size: 11px;
-  }
-
-  .idea-connector {
-    font-size: 16px;
-    padding-bottom: 38px;
-  }
-}
-
-
-section{padding:45px 0;border-top:1px solid #383632}
-h2{font-size:36px;line-height:1.1}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 18px;
-  margin-top: 28px;
-}
-
-
-.card {
-  position: relative;
-  background: linear-gradient(145deg, #24221f, #141413 75%);
-  border: 1px solid #393833;
-  border-top: 2px solid #B8BDC4;
-  padding: 30px 26px;
-  min-height: 210px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, .12);
-  transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
-}
-
-
-
-
-.card:hover {
-  border-color: #777D86;
-}
-
-
-.card h3 {
-  font-size: 23px;
-  line-height: 1.25;
-  margin: 22px 0 12px;
-}
-
-.card p {
-  font-size: 15px;
-  line-height: 1.8;
-  color: #b9b6ae;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-  border-color: #f07845;
-}
-
-
-@media (max-width: 600px) {
-  .grid {
-    grid-template-columns: 1fr;
-    gap: 14px;
-  }
-
-  .gallery {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 18px;
-  }
-
-  .card {
- 
-    padding: 25px 22px;
-    min-height: 175px;
-  }
-}
-
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px;
-  width: 100%;
-  min-width: 0;
-}
-
-.gallery figure {
-  margin: 0;
-  padding: 12px;
-  background: linear-gradient(145deg, #20201d, #121211);
-  border: 1px solid #383632;
-  overflow: hidden;
-  transition: border-color .25s ease, transform .25s ease;
-}
-
-.gallery figure:hover {
-  border-color: #777D86;
-  transform: translateY(-3px);
-}
-
-.gallery img {
-  display: block;
-  width: 100%;
-  height: auto;
-  max-height: 500px;
-  object-fit: contain;
-  background: #0c0c0b;
-  transition: transform .35s ease;
-}
-
-.gallery figure:hover img {
-  transform: scale(1.02);
-}
-
-.gallery figcaption {
-  padding: 16px 12px 8px;
-  color: #E7E2D8;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1.5;
-}
-
-.gallery figure p {
-  padding: 0 4px 16px;
-  margin: 0;
-  color: #c2beb5;
-  font-size: 14px;
-  line-height: 1.85;
-}
-
-
-footer{padding:25px 0;color:#aaa;border-top:1px solid #383632;font-size:13px}
-/* TIKTOK-INSPIRED CHARACTER PROCESS */
-#character-process > p {
-  max-width: 600px;
-  margin-bottom: 32px;
-}
-
-.process-phone {
-  width: 100%;
-  max-width: 430px;
-  margin: 35px auto 10px;
-  padding: 14px;
-  background: #171715;
-  border: 1px solid #383632;
-  border-radius: 22px;
-  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.3);
-  overflow: hidden;
-}
-
-.process-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 14px;
-  font-size: 10px;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
-
-.process-top span:last-child {
-  color: #f07845;
-  text-align: right;
-  font-size: 9px;
-}
-
-.process-progress {
-  display: flex;
-  gap: 5px;
-  margin-bottom: 12px;
-}
-
-.process-progress span {
-  flex: 1;
-  height: 3px;
-  border-radius: 10px;
-  background: #45433e;
-  transition: background 0.2s ease;
-}
-
-.process-progress span.active {
-  background: #f07845;
-}
-
-.process-track {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scrollbar-width: none;
-  border-radius: 12px;
-  overscroll-behavior-x: contain;
-  -webkit-overflow-scrolling: touch;
-}
-
-.process-track::-webkit-scrollbar {
-  display: none;
-}
-
-.process-slide {
-  flex: 0 0 100%;
-  min-width: 0;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-  background: #20201d;
-  overflow: hidden;
-}
-
-.process-slide img {
-  display: block;
-  width: 100%;
-  height: 390px;
-  object-fit: contain;
-  background: #111110;
-}
-
-.process-caption {
-  padding: 18px 16px 20px;
-}
-
-.process-caption small {
-  font-size: 9px;
-  letter-spacing: 1.5px;
-}
-
-.process-caption h3 {
-  margin: 10px 0 7px;
-  font-size: 23px;
-  line-height: 1.2;
-  letter-spacing: -0.5px;
-}
-
-.process-caption p {
-  margin: 0;
-  font-size: 13px;
-  line-height: 1.7;
-}
-
-.process-commission {
-  display: inline-block;
-  margin-top: 18px;
-  color: #f07845;
-  font-size: 10px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  text-decoration: none;
-}
-
-.process-controls {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 16px 2px 5px;
-}
-
-.process-controls button {
-  width: 42px;
-  height: 42px;
-  border: 1px solid #625d54;
-  border-radius: 50%;
-  background: transparent;
-  color: #f0eee8;
-  font-size: 22px;
-  cursor: pointer;
-}
-
-.process-controls button:hover {
-  border-color: #f07845;
-  color: #f07845;
-}
-
-#processCount {
-  color: #b9b6ae;
-  font-size: 11px;
-  letter-spacing: 2px;
-}
-
-.process-hint {
-  margin: 10px 0 2px;
-  text-align: center;
-  color: #8c8981;
-  font-size: 9px;
-  letter-spacing: 2px;
-}
-
-.process-hint span {
-  color: #f07845;
-  margin-left: 5px;
-}
-
-@media (max-width: 500px) {
-  .process-phone {
-    padding: 10px;
-    border-radius: 17px;
-  }
-
-  .process-slide img {
-    height: 340px;
-  }
-
-  .process-caption {
-    padding: 15px 12px 18px;
-  }
-
-  .process-caption h3 {
-    font-size: 21px;
-  }
-  }</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111110">
+  <meta name="description" content="Mavex King — artist, character designer and visual storyteller building worlds through art, film and animation.">
+  <title>Mavex King — Artist & Visual Storyteller</title>
+  <style>
+    :root {
+      --bg: #111110;
+      --surface: #191917;
+      --surface-raised: #20201d;
+      --text: #f0eee8;
+      --muted: #b7b4ac;
+      --soft: #89877f;
+      --line: #383832;
+      --silver: #c7c9c8;
+      --bone: #e7e2d8;
+      --accent: #d9784e;
+      --content: 1160px;
+      --gutter: clamp(20px, 5vw, 72px);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      overflow-wrap: anywhere;
+    }
+    body, button, a { -webkit-tap-highlight-color: transparent; }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+    .site-shell { width: 100%; min-height: 100vh; overflow: clip; }
+    .wrap { width: min(var(--content), calc(100% - var(--gutter) * 2)); margin-inline: auto; }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(17, 17, 16, .92);
+      border-bottom: 1px solid rgba(199, 201, 200, .12);
+      backdrop-filter: blur(16px);
+    }
+    .nav-wrap {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+    .wordmark { display: inline-flex; flex-direction: column; gap: 0; flex-shrink: 0; }
+    .wordmark strong { font-size: 15px; letter-spacing: .19em; line-height: 1.3; }
+    .wordmark span { color: var(--soft); font-size: 9px; letter-spacing: .18em; text-transform: uppercase; }
+    .nav-links { display: flex; align-items: center; gap: clamp(18px, 3vw, 38px); }
+    .nav-link {
+      position: relative;
+      padding: 10px 0;
+      color: var(--muted);
+      font-size: 12px;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+      transition: color .2s ease;
+    }
+    .nav-link::after {
+      position: absolute;
+      right: 0;
+      bottom: 2px;
+      left: 0;
+      height: 1px;
+      background: var(--accent);
+      content: "";
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .2s ease;
+    }
+    .nav-link:hover, .nav-link:focus-visible, .nav-link[aria-current="page"] { color: var(--text); }
+    .nav-link[aria-current="page"]::after, .nav-link:hover::after { transform: scaleX(1); }
+
+    .page { display: none; animation: page-in .28s ease both; }
+    .page.is-active { display: block; }
+    @keyframes page-in { from { opacity: .65; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+
+    .hero {
+      position: relative;
+      isolation: isolate;
+      display: flex;
+      align-items: center;
+      min-height: min(780px, calc(100svh - 76px));
+      padding: clamp(70px, 10vw, 140px) 0 clamp(74px, 9vw, 118px);
+      background:
+        radial-gradient(ellipse at 76% 42%, rgba(217, 120, 78, .10), transparent 33%),
+        linear-gradient(90deg, #111110 0%, rgba(17,17,16,.97) 27%, rgba(17,17,16,.78) 49%, rgba(17,17,16,.18) 100%),
+        linear-gradient(0deg, rgba(17,17,16,.82), transparent 48%);
+    }
+    .hero::before {
+      position: absolute;
+      z-index: -1;
+      inset: 0 0 0 36%;
+      background: linear-gradient(145deg, #292824, #171715 58%, #25221e);
+      content: "";
+      opacity: .78;
+    }
+    .hero-art {
+      position: absolute;
+      z-index: -1;
+      inset: 0 0 0 34%;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+    }
+    .hero-art img { width: 100%; height: 100%; object-fit: cover; object-position: center 35%; opacity: .88; }
+    .art-placeholder {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+      color: rgba(231,226,216,.62);
+      text-align: center;
+      background:
+        radial-gradient(ellipse at 54% 38%, rgba(199,201,200,.15), transparent 22%),
+        linear-gradient(135deg, #282824, #151514 68%);
+    }
+    .art-placeholder .placeholder-inner { max-width: 260px; }
+    .placeholder-mark { margin: 0 auto 15px; width: 52px; height: 52px; border: 1px solid rgba(231,226,216,.35); border-radius: 50%; display: grid; place-items: center; font-size: 22px; }
+    .art-placeholder strong { display: block; font-size: 10px; letter-spacing: .18em; text-transform: uppercase; }
+    .art-placeholder span { display: block; margin-top: 6px; color: rgba(231,226,216,.48); font-size: 10px; }
+    .hero-copy { width: min(610px, 65%); }
+    .eyebrow { display: flex; align-items: center; gap: 12px; color: var(--silver); font-size: 10px; letter-spacing: .22em; text-transform: uppercase; }
+    .eyebrow::before { width: 28px; height: 1px; background: var(--accent); content: ""; }
+    h1, h2, h3, p { margin-top: 0; }
+    .hero h1 { max-width: 680px; margin: 24px 0 20px; font-size: clamp(48px, 7.2vw, 94px); font-weight: 500; letter-spacing: -.075em; line-height: .98; }
+    .hero h1 span { display: block; color: var(--silver); }
+    .hero-description { max-width: 410px; margin-bottom: 30px; color: #c1beb6; font-size: clamp(14px, 1.5vw, 16px); line-height: 1.9; }
+    .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+    .button {
+      display: inline-flex;
+      min-height: 44px;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 11px 17px;
+      border: 1px solid var(--bone);
+      border-radius: 2px;
+      background: var(--bone);
+      color: #171715;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .075em;
+      text-transform: uppercase;
+      transition: background .2s ease, color .2s ease, border-color .2s ease, transform .2s ease;
+    }
+    .button::after { content: "↗"; font-size: 14px; }
+    .button:hover, .button:focus-visible { transform: translateY(-2px); background: transparent; color: var(--bone); }
+    .button-secondary { border-color: rgba(231,226,216,.42); background: rgba(17,17,16,.3); color: var(--text); }
+    .button-secondary:hover, .button-secondary:focus-visible { border-color: var(--bone); background: var(--bone); color: #171715; }
+    .hero-meta { display: flex; gap: 26px; margin-top: clamp(45px, 7vw, 78px); color: var(--soft); font-size: 10px; letter-spacing: .12em; text-transform: uppercase; }
+    .hero-meta span { display: flex; align-items: center; gap: 8px; }
+    .hero-meta span::before { width: 5px; height: 5px; border-radius: 50%; background: var(--accent); content: ""; }
+
+    .section { padding: clamp(72px, 10vw, 124px) 0; }
+    .section-top { display: flex; align-items: end; justify-content: space-between; gap: 28px; margin-bottom: 36px; }
+    .section-kicker { margin-bottom: 12px; color: var(--accent); font-size: 10px; letter-spacing: .2em; text-transform: uppercase; }
+    .section-title { margin-bottom: 0; font-size: clamp(32px, 4.6vw, 54px); font-weight: 500; letter-spacing: -.055em; line-height: 1.05; }
+    .section-note { max-width: 360px; margin-bottom: 3px; color: var(--muted); font-size: 13px; line-height: 1.8; }
+    .rule { height: 1px; background: var(--line); }
+    .intro-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(35px, 8vw, 100px); align-items: start; }
+    .intro-aside { color: var(--soft); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; }
+    .intro-copy { max-width: 690px; }
+    .intro-copy p { color: #c5c2ba; font-size: clamp(17px, 2vw, 22px); line-height: 1.8; }
+    .intro-copy p:last-child { margin-bottom: 0; }
+    .text-link { display: inline-flex; align-items: center; gap: 10px; padding: 0 0 5px; border-bottom: 1px solid #77756d; color: var(--text); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; }
+    .text-link span { color: var(--accent); font-size: 15px; }
+
+    .selected-work { background: #151514; border-top: 1px solid #242420; border-bottom: 1px solid #242420; }
+    .work-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+    .work-card { min-width: 0; }
+    .work-image { position: relative; display: grid; min-height: 250px; aspect-ratio: 1.15 / 1; place-items: center; overflow: hidden; border: 1px solid #34342f; background: #1d1d1a; }
+    .work-image .art-placeholder { position: absolute; }
+    .work-image img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; background: #111110; }
+    .work-info { display: flex; align-items: start; justify-content: space-between; gap: 16px; padding-top: 17px; }
+    .work-info h3 { margin-bottom: 5px; font-size: 15px; font-weight: 500; }
+    .work-info p { margin-bottom: 0; color: var(--soft); font-size: 11px; }
+    .work-number { color: var(--soft); font-size: 10px; letter-spacing: .1em; }
+
+    .services-preview { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+    .service-mini { min-width: 0; padding: 25px 22px 27px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .service-mini .num { display: block; margin-bottom: 33px; color: var(--accent); font-size: 10px; letter-spacing: .12em; }
+    .service-mini h3 { margin-bottom: 10px; font-size: 17px; font-weight: 500; letter-spacing: -.02em; }
+    .service-mini p { margin-bottom: 0; color: var(--muted); font-size: 12px; line-height: 1.8; }
+
+    .contact-band { padding: clamp(55px, 8vw, 86px) 0; background: #20201d; }
+    .contact-inner { display: flex; align-items: center; justify-content: space-between; gap: 30px; }
+    .contact-inner h2 { max-width: 600px; margin-bottom: 10px; font-size: clamp(30px, 4.5vw, 52px); font-weight: 500; letter-spacing: -.055em; line-height: 1.08; }
+    .contact-inner p { margin-bottom: 0; color: var(--muted); font-size: 13px; }
+
+    .page-heading { padding: clamp(66px, 9vw, 110px) 0 52px; }
+    .page-heading h1 { max-width: 850px; margin: 20px 0 18px; font-size: clamp(48px, 8vw, 88px); font-weight: 500; letter-spacing: -.075em; line-height: .98; }
+    .page-heading p { max-width: 590px; margin-bottom: 0; color: var(--muted); font-size: 15px; line-height: 1.9; }
+    .gallery-toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; margin: 0 0 26px; }
+    .filter-list { display: flex; flex-wrap: wrap; gap: 8px; }
+    .filter-button { padding: 8px 12px; border: 1px solid var(--line); border-radius: 2px; background: transparent; color: var(--muted); font-size: 10px; letter-spacing: .08em; text-transform: uppercase; cursor: pointer; }
+    .filter-button[aria-pressed="true"], .filter-button:hover { border-color: var(--silver); color: var(--text); }
+    .gallery-count { color: var(--soft); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; }
+    .gallery-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(24px, 3vw, 38px) 22px; padding-bottom: 90px; }
+    .gallery-item { min-width: 0; margin: 0; }
+    .gallery-visual { position: relative; display: grid; aspect-ratio: 4 / 3; place-items: center; overflow: hidden; border: 1px solid #33332e; background: #1a1a18; }
+    .gallery-visual.portrait { aspect-ratio: 3 / 4; }
+    .gallery-visual.landscape { aspect-ratio: 16 / 10; }
+    .gallery-visual img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; background: #111110; }
+    .gallery-visual .art-placeholder { position: absolute; }
+    .gallery-item figcaption { display: flex; justify-content: space-between; gap: 14px; padding-top: 14px; }
+    .gallery-item h3 { margin-bottom: 4px; font-size: 14px; font-weight: 500; }
+    .gallery-item p { margin-bottom: 0; color: var(--soft); font-size: 11px; }
+    .gallery-item .index { padding-top: 3px; color: var(--soft); font-size: 10px; }
+
+    .service-list { border-top: 1px solid var(--line); }
+    .service-row { display: grid; grid-template-columns: 70px minmax(0, 1fr) minmax(200px, .7fr); gap: 26px; padding: 34px 0; border-bottom: 1px solid var(--line); }
+    .service-index { padding-top: 6px; color: var(--accent); font-size: 11px; letter-spacing: .12em; }
+    .service-main h2 { margin-bottom: 11px; font-size: clamp(22px, 3vw, 30px); font-weight: 500; letter-spacing: -.035em; }
+    .service-main p { max-width: 510px; margin-bottom: 0; color: var(--muted); font-size: 13px; line-height: 1.9; }
+    .service-detail { align-self: center; color: var(--soft); font-size: 11px; line-height: 2; }
+    .service-detail span { display: block; color: var(--silver); }
+    .process-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 26px; margin-top: 38px; }
+    .process-item { padding-top: 18px; border-top: 1px solid var(--line); }
+    .process-item span { color: var(--accent); font-size: 10px; letter-spacing: .12em; }
+    .process-item h3 { margin: 16px 0 8px; font-size: 15px; font-weight: 500; }
+    .process-item p { margin-bottom: 0; color: var(--muted); font-size: 12px; line-height: 1.8; }
+
+    .site-footer { padding: 27px 0; border-top: 1px solid var(--line); }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+    .footer-inner p { margin: 0; color: var(--soft); font-size: 10px; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 18px; }
+    .footer-links a { color: var(--muted); font-size: 10px; }
+    .footer-links a:hover { color: var(--text); }
+    .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+    @media (min-width: 1400px) { .hero { min-height: 790px; } }
+    @media (max-width: 760px) {
+      :root { --gutter: 24px; }
+      .nav-wrap { min-height: 68px; gap: 12px; }
+      .wordmark strong { font-size: 13px; }
+      .wordmark span { font-size: 8px; }
+      .nav-links { gap: clamp(12px, 3vw, 22px); }
+      .nav-link { font-size: 10px; letter-spacing: .045em; }
+      .hero { min-height: 690px; min-height: min(780px, calc(100svh - 68px)); padding: 85px 0 40px; align-items: end; }
+      .hero::before { inset: 0; }
+      .hero-art { inset: 0; opacity: .72; }
+      .hero-art img { object-position: 60% center; }
+      .hero { background: linear-gradient(90deg, rgba(17,17,16,.92) 0%, rgba(17,17,16,.72) 52%, rgba(17,17,16,.30) 100%), linear-gradient(0deg, #111110 0%, rgba(17,17,16,.82) 17%, transparent 75%); }
+      .hero-copy { width: 100%; position: relative; }
+      .hero h1 { max-width: 560px; font-size: clamp(50px, 12.5vw, 78px); }
+      .hero-description { max-width: 390px; }
+      .hero-meta { gap: 16px; flex-wrap: wrap; margin-top: 42px; }
+      .section-top { align-items: start; flex-direction: column; gap: 15px; }
+      .intro-grid { grid-template-columns: 1fr; gap: 22px; }
+      .services-preview { grid-template-columns: 1fr; }
+      .service-mini { padding: 21px; }
+      .service-mini .num { margin-bottom: 18px; }
+      .contact-inner { align-items: start; flex-direction: column; }
+      .service-row { grid-template-columns: 34px minmax(0, 1fr); gap: 16px; padding: 28px 0; }
+      .service-detail { grid-column: 2; }
+      .process-grid { grid-template-columns: 1fr; gap: 20px; }
+    }
+    @media (max-width: 480px) {
+      :root { --gutter: 19px; }
+      .nav-wrap { min-height: 64px; }
+      .wordmark strong { font-size: 11px; letter-spacing: .14em; }
+      .wordmark span { max-width: 120px; font-size: 7px; letter-spacing: .12em; }
+      .nav-links { gap: 11px; }
+      .nav-link { font-size: 9px; }
+      .hero { min-height: 720px; min-height: min(780px, calc(100svh - 64px)); }
+      .hero h1 { font-size: clamp(46px, 12vw, 61px); letter-spacing: -.07em; }
+      .hero-description { max-width: 330px; font-size: 14px; }
+      .hero-meta { font-size: 9px; }
+      .work-grid, .gallery-grid { grid-template-columns: minmax(0, 1fr); }
+      .work-image { aspect-ratio: 1 / 1; }
+      .gallery-visual { aspect-ratio: 4 / 3; }
+      .gallery-visual.portrait { aspect-ratio: 4 / 5; }
+      .footer-inner { align-items: start; flex-direction: column; }
+      .button { min-height: 42px; padding: 10px 14px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+    }
+  </style>
 </head>
 <body>
-<main>
-<header>MAVEX KING<span class="orange">.</span></header>
-
-<div class="hero">
-  <small>ARTIST · FILMMAKER · CREATIVE DIRECTOR</small>
-
-  <h1>Worlds worth<br>getting lost in.</h1>
-
-  <p>
-    I create characters, build visual worlds, and explore stories
-    through illustration, concept art, film and animation.
-    Every image begins with a question. Every world has a story.
-  </p>
-
-  <a class="button" href="#work">EXPLORE SELECTED WORK ↘</a>
-</div>
-
-<section id="work">
-<small>01 — SELECTED WORK</small>
-<h2>Ideas becoming worlds.</h2>
-<div class="grid">
-<div class="card"><small>WORLD-BUILDING</small><h3>NØ!SE</h3><p>A psychological science-fiction universe exploring mental noise, attention and the search for signal.</p></div>
-<div class="card"><small>ILLUSTRATION</small><h3>Character & Concept Art</h3><p>Original characters and visual concepts built around emotion, atmosphere and story.</p></div>
-<div class="card"><small>MOVING IMAGE</small><h3>Film & Animation</h3><p>Experiments in cinematic storytelling, animation and imagined worlds.</p></div>
-<div class="card"><small>INDEPENDENT PRACTICE</small><h3>Visual Studies</h3><p>Sketches, explorations and unfinished ideas from an evolving creative practice.</p></div>
-</div>
-
-</section>
-
-<section id="services">
-  <small>02 — SERVICES</small>
-  <h2>What I can create for you.</h2>
-  
-<p>Bring your characters to life with original designs, expression sheets, turnarounds and detailed character sheets — built for stories, games, animation and personal projects.</p>
-
-  <div class="grid">
-    
-<div class="card">
-  <h3>Character Design</h3>
-  <p>Bring your characters to life with original designs, expression sheets, turnarounds and detailed character sheets — built for stories, games, animation and personal projects.</p>
-  <a class="button" href="#contact">Discuss a project ↗</a>
-</div>
-
-
-    
-<div class="card">
-  <h3>Illustration</h3>
-  <p>Create artwork that captures attention and tells a story — from striking character illustrations to cover art, promotional visuals and custom pieces made around your idea.</p>
-  <a class="button" href="#contact">Discuss a project ↗</a>
-</div>
-
-
-    
-<div class="card">
-  <h3>Concept Art</h3>
-  <p>Explore the look and feel of a world before it exists — from environment concepts and atmosphere studies to visual ideas that help shape films, games, animation and original stories.</p>
-  <a class="button" href="#contact">Discuss a project ↗</a>
-</div>
-
-
-    <div class="card">
-      
-<div class="card">
-  <h3>Creative Development</h3>
-  <p>Develop an idea into something with direction and identity — through story concepts, character ideas, world-building and visual direction for original creative projects.</p>
-  <a class="button" href="#contact">Discuss a project ↗</a>
-</div>
-
-      
-<p>Develop an idea into something with direction and identity — through story concepts, character ideas, world-building and visual direction for original creative projects.</p>
-
-    </div>
-  </div>
-</section>
-
-<section id="gallery">
-  <small>01.5 — ARTWORK ARCHIVE</small>
-  <h2>Selected visual work.</h2>
-  <p>A collection of characters, images and ideas from my creative practice.</p>
-
-  <div class="gallery">
-    <figure>
-      <img src="Lumii_20261011_021859623.jpg" alt="Artwork by Mavex King">
-      
-<figcaption>The Signal — Brand Character Design</figcaption>
-<p>A character model sheet developed for NØ!SE, built around the identity of The Signal. More than defining how the character looks from every angle, this piece establishes a visual identity for a world where the line between noise and signal is never quite clear. Every detail helps give the character a presence of his own.</p>
-
-    </figure>
-
-    <figure>
-      <img src="Lumii_20260902_195852278.jpg" alt="Artwork by Mavex King">
-      
-<figcaption>Against the Dying Light — Character Design</figcaption>
-<p>Some characters tell you who they are before they ever speak. This one feels caught between surprise and realization, as if something has just changed and he's still trying to make sense of it. I wanted the expression, the glowing eyes and the warmth of the fading sky to make that moment feel alive.</p>
-
-    </figure>
-
-    <figure>
-      <img src="Untitled14_20261011052219.png" alt="Artwork by Mavex King">
-      
-<figcaption>A World of My Own — Character Illustration</figcaption>
-<p>A conversation between who you are and who you hope to become. The smaller figure looks up at a larger version of himself, almost as if he's standing before the person he's been trying to reach. I wanted to capture that feeling of looking at your own potential from a distance — close enough to imagine it, but still figuring out how to become it.</p>
-
-    </figure>
-    </div>
-
-  <a class="button" href="gallery.html">VIEW FULL GALLERY ↗</a>
-</section>
-
-<section id="character-process">
-  <small>03 — INSIDE THE PROCESS</small>
-  <h2>Watch an idea take shape.</h2>
-  <p>From the first rough lines to the final details. Swipe through the stages and see how the character comes to life.</p>
-
-  <div class="process-phone">
-    <div class="process-top">
-      <span>MAVEX KING.</span>
-      <span>CHARACTER STUDY / 001</span>
-    </div>
-
-    <div class="process-progress" aria-label="Artwork progress">
-      <span class="active"></span>
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-
-    <div class="process-track" id="processTrack">
-      <article class="process-slide">
-        <img src="Lumii_20261012_180419502.jpg" alt="Original character rough sketch">
-        <div class="process-caption">
-          <small>01 / THE BEGINNING</small>
-          <h3>Every character starts somewhere.</h3>
-          <p>The first lines. The first idea. Nothing is fixed yet.</p>
-        </div>
-      </article>
-
-      <article class="process-slide">
-        <img src="Lumii_20261012_180437324.jpg" alt="Original character clean line art">
-        <div class="process-caption">
-          <small>02 / FINDING THE SHAPE</small>
-          <h3>The idea gets clearer.</h3>
-          <p>Shapes become decisions. The character begins to hold together.</p>
-        </div>
-      </article>
-
-      <article class="process-slide">
-        <img src="Lumii_20261012_180447225.jpg" alt="Original character base colours and rendering">
-        <div class="process-caption">
-          <small>03 / BUILDING THE WORLD</small>
-          <h3>Colour changes everything.</h3>
-          <p>Light, tone and colour give the design a stronger presence.</p>
-        </div>
-      </article>
-
-      <article class="process-slide">
-        <img src="Lumii_20261012_181553025.jpg" alt="Finished original character artwork">
-        <div class="process-caption">
-          <small>04 / THE FINAL FORM</small>
-          <h3>Now it feels alive.</h3>
-          <p>An idea becomes something you can actually see.</p>
-          <a class="process-commission" href="#commission-options" onclick="document.getElementById('commission-options').scrollIntoView({behavior:'smooth'}); return false;">HAVE A CHARACTER IN MIND? ↗</a>
-        </div>
-      </article>
-    </div>
-
-    <div class="process-controls">
-      <button type="button" id="processPrev" aria-label="Previous slide">←</button>
-      <span id="processCount">01 / 04</span>
-      <button type="button" id="processNext" aria-label="Next slide">→</button>
-    </div>
-
-    <p class="process-hint">SWIPE TO EXPLORE <span>↔</span></p>
-  </div>
-</section><section>
-<small>02 — ABOUT</small>
-
-<h2>Images with something behind them.</h2>
-<p>My practice sits at the intersection of character design, visual development and filmmaking. I'm interested in the details that make a character feel real, a place feel lived in, or a story stay with you.</p>
-<p>This portfolio is an evolving archive of my work and the ideas I'm building toward.</p>
-</section><section id="working-together">
-  <small>04 — THE COLLABORATION</small>
-  <h2>From the first thought to the final piece.</h2>
-  <p>Every project starts with an idea. Here's how we turn yours into something real.</p>
-
-  <div class="grid">
-    <div class="card">
-      <small>01 — THE CONVERSATION</small>
-      <h3>Tell me what you're imagining.</h3>
-      <p>Share your idea, references, or even a rough description. You don't need to have everything figured out yet.</p>
-    </div>
-
-    <div class="card">
-      <small>02 — THE DIRECTION</small>
-      <h3>We find the right shape.</h3>
-      <p>We'll discuss the goal, visual direction, and details so the work has a clear purpose before it begins.</p>
-    </div>
-
-    <div class="card">
-      <small>03 — THE CREATION</small>
-      <h3>Let's bring it to life.</h3>
-      <p>With the direction agreed, I'll develop the artwork around your project's needs and the vision we've established.</p>
-    </div>
-  </div>
-
-  <a class="button" href="#commission-options">LET'S DISCUSS YOUR IDEA ↗</a>
-</section>
-
-
-<section id="contact">
-  <small>03 — FROM IDEA TO REALITY</small>
-
-  <h2>Every world starts somewhere.</h2>
-
-  <p>
-    Maybe it's a character you've imagined, a world you've
-    been trying to picture, or an idea you can't quite
-    explain yet. Let's find out what it could become.
-  </p>
-
-  <div class="idea-journey">
-
-    <div class="idea-stage">
-      <div class="idea-art">
-        <svg viewBox="0 0 100 100" width="100%" aria-label="An idea represented by a glowing lightbulb" role="img">
-          <path d="M50 12 C32 12 22 26 27 43 C30 51 39 57 40 65 H60 C61 57 70 51 73 43 C78 26 68 12 50 12Z"
-            fill="none" stroke="#f07845" stroke-width="2.5"/>
-          <path d="M40 70 H60 M42 76 H58 M45 82 H55"
-            stroke="#f07845" stroke-width="2.5" stroke-linecap="round"/>
-          <path d="M50 2 V7 M16 20 L22 25 M84 20 L78 25 M9 48 H17 M83 48 H91"
-            stroke="#f07845" stroke-width="2" stroke-linecap="round"/>
-          <path d="M42 35 Q50 26 58 35 L53 47 H47Z"
-            fill="#f07845" opacity=".25"/>
-        </svg>
+  <div class="site-shell">
+    <header class="site-header">
+      <div class="wrap nav-wrap">
+        <a class="wordmark" href="#home" data-page-link="home" aria-label="Mavex King home">
+          <strong>MAVEX KING</strong>
+          <span>Artist · Visual Storyteller</span>
+        </a>
+        <nav class="nav-links" aria-label="Main navigation">
+          <a class="nav-link" href="#home" data-page-link="home" aria-current="page">Home</a>
+          <a class="nav-link" href="#gallery" data-page-link="gallery">Gallery</a>
+          <a class="nav-link" href="#services" data-page-link="services">Services</a>
+        </nav>
       </div>
-      <small>01 — THE IDEA</small>
-      <p>It begins with a thought.</p>
-    </div>
+    </header>
 
-    <div class="idea-connector" aria-hidden="true">→</div>
+    <main>
+      <section class="page is-active" id="page-home" data-page="home">
+        <section class="hero">
+          <div class="hero-art" aria-label="Hero artwork placeholder">
+            <!-- IMAGE SLOT: replace hero-artwork.jpg with your chosen landscape hero artwork. -->
+            <div class="art-placeholder" data-placeholder>
+              <div class="placeholder-inner"><div class="placeholder-mark">M</div><strong>Hero artwork goes here</strong><span>Replace hero-artwork.jpg when ready</span></div>
+            </div>
+            <img src="hero-artwork.jpg" alt="Selected artwork by Mavex King" onerror="this.hidden=true" hidden>
+          </div>
+          <div class="wrap">
+            <div class="hero-copy">
+              <div class="eyebrow">Independent artist & visual storyteller</div>
+              <h1>Building worlds.<span>Finding the story.</span></h1>
+              <p class="hero-description">I create characters, visual worlds and stories that sit somewhere between imagination and reality — through concept art, visual development and animation.</p>
+              <div class="actions">
+                <a class="button" href="#gallery" data-page-link="gallery">Explore the work</a>
+                <a class="button button-secondary" href="#services" data-page-link="services">Work with me</a>
+              </div>
+              <div class="hero-meta"><span>Character & concept art</span><span>Visual storytelling</span></div>
+            </div>
+          </div>
+        </section>
 
-    <div class="idea-stage">
-      <div class="idea-art">
-        <svg viewBox="0 0 100 100" width="100%" aria-label="A rough character concept sketch" role="img">
-          <path d="M24 77 L27 36 L43 18 L64 24 L77 49 L72 78"
-            fill="none" stroke="#b9b6ae" stroke-width="1.5" stroke-dasharray="4 4"/>
-          <path d="M29 72 L33 39 L46 27 L62 29 L70 49 L66 73 L29 72Z"
-            fill="none" stroke="#f07845" stroke-width="2"/>
-          <path d="M33 39 L51 50 L62 29 M51 50 L48 70 M33 39 L29 72 M51 50 L70 49"
-            fill="none" stroke="#b9b6ae" stroke-width="1.2"/>
-          <path d="M18 83 L77 83 M37 19 L32 14 M66 22 L73 16"
-            fill="none" stroke="#f07845" stroke-width="1.5" stroke-linecap="round"/>
-        </svg>
+        <section class="section">
+          <div class="wrap intro-grid">
+            <div class="intro-aside">01 / A little about my practice</div>
+            <div class="intro-copy">
+              <p>I’m Mavex King, an artist and visual storyteller interested in character, atmosphere and the ideas that make a world feel alive.</p>
+              <p>My work moves between character design, concept development and cinematic storytelling — building visuals with a clear point of view and room for a story to grow.</p>
+              <a class="text-link" href="#services" data-page-link="services">Explore my services <span>↗</span></a>
+            </div>
+          </div>
+        </section>
+
+        <section class="section selected-work">
+          <div class="wrap">
+            <div class="section-top">
+              <div><div class="section-kicker">02 / Selected work</div><h2 class="section-title">A few things I've made.</h2></div>
+              <a class="text-link" href="#gallery" data-page-link="gallery">View the full gallery <span>↗</span></a>
+            </div>
+            <div class="work-grid">
+              <article class="work-card">
+                <a href="#gallery" data-page-link="gallery" class="work-image" aria-label="View character design in gallery">
+                  <div class="art-placeholder" data-placeholder><div class="placeholder-inner"><div class="placeholder-mark">01</div><strong>Artwork placeholder</strong><span>Character design</span></div></div>
+                  <!-- IMAGE SLOT: replace gallery-character.jpg with a character design image. -->
+                  <img src="gallery-character.jpg" alt="Character design by Mavex King" onerror="this.hidden=true" hidden>
+                </a>
+                <div class="work-info"><div><h3>Character & Visual Design</h3><p>Character exploration · Concept art</p></div><span class="work-number">01</span></div>
+              </article>
+              <article class="work-card">
+                <a href="#gallery" data-page-link="gallery" class="work-image" aria-label="View visual development in gallery">
+                  <div class="art-placeholder" data-placeholder><div class="placeholder-inner"><div class="placeholder-mark">02</div><strong>Artwork placeholder</strong><span>Visual development</span></div></div>
+                  <!-- IMAGE SLOT: replace gallery-world.jpg with an environment or story artwork. -->
+                  <img src="gallery-world.jpg" alt="Visual development artwork by Mavex King" onerror="this.hidden=true" hidden>
+                </a>
+                <div class="work-info"><div><h3>Worlds & Atmosphere</h3><p>Visual development · Story concepts</p></div><span class="work-number">02</span></div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="wrap">
+            <div class="section-top">
+              <div><div class="section-kicker">03 / What I can help with</div><h2 class="section-title">From first idea to visual world.</h2></div>
+              <p class="section-note">Creative support for projects that need strong characters, a distinctive visual language or a story worth seeing through.</p>
+            </div>
+            <div class="services-preview">
+              <article class="service-mini"><span class="num">01 / DESIGN</span><h3>Character & Concept Art</h3><p>Distinctive characters, visual exploration and design development shaped around your project.</p></article>
+              <article class="service-mini"><span class="num">02 / DEVELOPMENT</span><h3>Visual Development</h3><p>Worlds, mood, atmosphere and visual direction that give a creative idea its own identity.</p></article>
+              <article class="service-mini"><span class="num">03 / STORY</span><h3>Film & Animation Concepts</h3><p>Story-driven visuals, sequence ideas and early development for animated or cinematic work.</p></article>
+            </div>
+            <div style="margin-top:26px"><a class="text-link" href="#services" data-page-link="services">See all services & process <span>↗</span></a></div>
+          </div>
+        </section>
+
+        <section class="contact-band">
+          <div class="wrap contact-inner">
+            <div><div class="section-kicker">Have a project in mind?</div><h2>Let's make something that stays with people.</h2><p>Tell me what you're building, and let's see how I can help.</p></div>
+            <!-- Replace the email address below with your preferred professional email. -->
+            <a class="button" href="mailto:your-email@example.com?subject=Project%20enquiry">Start an enquiry</a>
+          </div>
+        </section>
+      </section>
+
+      <section class="page" id="page-gallery" data-page="gallery">
+        <div class="wrap">
+          <header class="page-heading">
+            <div class="eyebrow">The work / 01</div>
+            <h1>Ideas made visible.</h1>
+            <p>A collection of character studies, visual experiments and worlds in progress. Artwork frames preserve each image's proportions; portrait and landscape pieces can sit side by side without being stretched.</p>
+          </header>
+          <div class="gallery-toolbar">
+            <div class="filter-list" aria-label="Filter gallery">
+              <button class="filter-button" type="button" data-filter="all" aria-pressed="true">All work</button>
+              <button class="filter-button" type="button" data-filter="character" aria-pressed="false">Character art</button>
+              <button class="filter-button" type="button" data-filter="concept" aria-pressed="false">Concept & worlds</button>
+              <button class="filter-button" type="button" data-filter="study" aria-pressed="false">Studies</button>
+            </div>
+            <span class="gallery-count" id="gallery-count">06 projects</span>
+          </div>
+          <div class="gallery-grid" id="gallery-grid">
+            <figure class="gallery-item" data-category="character">
+              <div class="gallery-visual portrait"><div class="art-placeholder" data-placeholder><div class="placeholder-inner"><div class="placeholder-mark">01</div><strong>Portrait artwork</strong><span>Replace with filename</span></div></div><!-- IMAGE SLOT: replace artwork-01.jpg --><img src="artwork-01.jpg" alt="Character artwork by Mavex King" onerror="this.hidden=true" hidden></div>
+              <figcaption><div><h3>Character Study 01</h3><p>Character art · Portrait</p></div><span class="index">01</span></figcaption>
+            </figure>
+            <figure class="gallery-item" data-category="concept">
+              <div class="gallery-visual landscape"><div class="art-placeholder" data-placeholder><div class="placeholder-inner"><div class="placeholder-mark">02</div><strong>Landscape artwork</strong><span>Replace with filename</span></div></div><!-- IMAGE SLOT: replace artwork-02.jpg --><img src="artwork-02.jpg" alt="Concept artwork by Mavex King" onerror="this.hidden=true" hidden></div>
+              <figcaption><div><h3>World Study 01</h3><p>Concept art · Landscape</p></div><span class="index">02</span></figcaption>
+            </figure>
+            <figure class="gallery-item" data-category="character">
+              <div class="gallery-visual"><div class="art-placeholder" data-placeholder><div class="placeholder-inner"><div class="placeholder-mark">03</div><strong>Character artwork</strong><span>Replace with filename</span></div></div><!-- IMAGE SLOT: replace artwork-03.jpg --><img src="artwork-03.jpg" alt="Character design by Mavex King" onerror="this.hidden=true" hidden></div>
+              <figcaption><div><h3>Character Study 02</h3><p>Character design · Exploration</p></div><span class="index">03</span></figcaption>
+            </figure>
+            <figure class="gallery-item" data-category="study">
+              <div class="gallery-visual portrait"><div class="art-placeholder" data-placeholder><div class="placeholder-inner"><div class="placeholder-mark">04</div><strong>Study artwork</strong><span>Replace with filename</span></div></div><!-- IMAGE SLOT: replace artwork-04.jpg --><img src="artwork-04.jpg" alt="Art study by Mavex King" onerror="this.hidden=true" hidden></div>
+              <figcaption><div><h3>Form & Light Study</h3><p>Study · Lighting</p></div><span class="index">04</span></figcaption>
+            </figure>
+            <figure class="gallery-item" data-category="concept">
+              <div class="gallery-visual landscape"><div class="art-placeholder" data-placeholder><div class="placeholder-inner"><div class="placeholder-mark">05</div><strong>Environment artwork</strong><span>Replace with filename</span></div></div><!-- IMAGE SLOT: replace artwork-05.jpg --><img src="artwork-05.jpg" alt="Environment concept by Mavex King" onerror="this.hidden=true" hidden></div>
+              <figcaption><div><h3>Environment Study</h3><p>Visual development · Atmosphere</p></div><span class="index">05</span></figcaption>
+            </figure>
+            <figure class="gallery-item" data-category="study">
+              <div class="gallery-visual"><div class="art-placeholder" data-placeholder><div class="placeholder-inner"><div class="placeholder-mark">06</div><strong>Process artwork</strong><span>Replace with filename</span></div></div><!-- IMAGE SLOT: replace artwork-06.jpg --><img src="artwork-06.jpg" alt="Creative process artwork by Mavex King" onerror="this.hidden=true" hidden></div>
+              <figcaption><div><h3>Process & Experiments</h3><p>Studies · Process</p></div><span class="index">06</span></figcaption>
+            </figure>
+          </div>
+        </div>
+        <section class="contact-band"><div class="wrap contact-inner"><div><div class="section-kicker">Interested in a piece?</div><h2>Let's talk about your project.</h2><p>For commissions, collaborations and creative enquiries.</p></div><a class="button" href="mailto:your-email@example.com?subject=Artwork%20enquiry">Get in touch</a></div></section>
+      </section>
+
+      <section class="page" id="page-services" data-page="services">
+        <div class="wrap">
+          <header class="page-heading">
+            <div class="eyebrow">Services / 02</div>
+            <h1>Good ideas deserve a strong visual language.</h1>
+            <p>I work with creators, teams and brands to turn early ideas into clear, memorable visuals — from a single character to the beginnings of a larger world.</p>
+          </header>
+          <div class="service-list">
+            <article class="service-row"><div class="service-index">01</div><div class="service-main"><h2>Character Design & Concept Art</h2><p>Character concepts, silhouettes, expression exploration, costume ideas and visual development designed to serve the personality and story behind a character.</p></div><div class="service-detail"><span>Good for</span>Animation · Comics · Games · Personal projects</div></article>
+            <article class="service-row"><div class="service-index">02</div><div class="service-main"><h2>Visual Development & World-Building</h2><p>Early visual direction for a world: atmosphere, reference-driven exploration, environment concepts and the details that make a setting feel distinct.</p></div><div class="service-detail"><span>Good for</span>Story projects · Film · Animation · Creative brands</div></article>
+            <article class="service-row"><div class="service-index">03</div><div class="service-main"><h2>Story-Driven Art & Key Visuals</h2><p>Illustrations and key images built around a clear moment, feeling or narrative idea — created to communicate more than just what is in the frame.</p></div><div class="service-detail"><span>Good for</span>Promotional art · Pitch concepts · Covers · Campaigns</div></article>
+            <article class="service-row"><div class="service-index">04</div><div class="service-main"><h2>Film & Animation Development</h2><p>Creative collaboration on visual storytelling, character-led concepts and early development materials for projects moving toward film or animation.</p></div><div class="service-detail"><span>Good for</span>Independent creators · Small teams · Early-stage projects</div></article>
+          </div>
+
+          <section class="section" style="padding-bottom:76px">
+            <div class="section-kicker">How we work</div>
+            <h2 class="section-title">Clear steps. Thoughtful work.</h2>
+            <div class="process-grid">
+              <article class="process-item"><span>STEP 01</span><h3>Understand the idea</h3><p>We discuss your goals, references, audience, timeline and what the work needs to communicate.</p></article>
+              <article class="process-item"><span>STEP 02</span><h3>Explore & develop</h3><p>I establish a visual direction, share progress at agreed checkpoints and refine the strongest route.</p></article>
+              <article class="process-item"><span>STEP 03</span><h3>Refine & deliver</h3><p>We confirm final details and deliver the agreed artwork and file formats for your project.</p></article>
+            </div>
+          </section>
+        </div>
+        <section class="contact-band"><div class="wrap contact-inner"><div><div class="section-kicker">Let's discuss your brief</div><h2>Tell me what you're imagining.</h2><p>Share a few details and we'll work out the best next step.</p></div><a class="button" href="mailto:your-email@example.com?subject=Creative%20project%20enquiry">Enquire about a project</a></div></section>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <p>© <span id="year">2026</span> Mavex King. Built around the work.</p>
+        <div class="footer-links"><a href="#home" data-page-link="home">Home</a><a href="#gallery" data-page-link="gallery">Gallery</a><a href="#services" data-page-link="services">Services</a><a href="mailto:your-email@example.com">Email</a></div>
       </div>
-      <small>02 — THE PROCESS</small>
-      <p>We explore what it could be.</p>
-    </div>
-
-    <div class="idea-connector" aria-hidden="true">→</div>
-
-    <div class="idea-stage">
-      <div class="idea-art">
-        <svg viewBox="0 0 100 100" width="100%" aria-label="A finished stylized character portrait" role="img">
-          <path d="M16 88 Q19 66 36 61 L36 53 Q23 44 27 28 Q30 12 49 12 Q70 12 73 31 Q76 46 63 54 L64 62 Q83 68 86 88Z"
-            fill="#f07845" opacity=".2"/>
-          <path d="M36 61 L36 53 Q23 44 27 28 Q30 12 49 12 Q70 12 73 31 Q76 46 63 54 L64 62"
-            fill="none" stroke="#f07845" stroke-width="2.5" stroke-linejoin="round"/>
-          <path d="M36 37 Q44 32 50 38 M57 38 L65 35 M46 49 Q51 53 57 49"
-            fill="none" stroke="#f0eee8" stroke-width="2" stroke-linecap="round"/>
-          <path d="M22 85 Q29 70 42 68 L50 78 L59 68 Q75 72 81 85"
-            fill="none" stroke="#f07845" stroke-width="2.5" stroke-linejoin="round"/>
-          <path d="M42 68 L50 78 L59 68"
-            fill="none" stroke="#f0eee8" stroke-width="1.5"/>
-          <path d="M21 24 L14 19 M78 20 L85 15 M82 44 H90"
-            stroke="#f07845" stroke-width="2" stroke-linecap="round"/>
-        </svg>
-      </div>
-      <small>03 — THE RESULT</small>
-      <p>An idea you can finally see.</p>
-    </div>
-
+    </footer>
   </div>
 
-<div class="inquiry-copy" id="commission-options">
-<h2>Have something in mind?</h2>
-    <p>
-      Bring me the rough idea, the reference, or even just
-      the feeling you're trying to capture. We'll work
-      toward a visual that gives it shape and identity.
-    </p>
+  <script>
+    (function () {
+      const pageLinks = document.querySelectorAll('[data-page-link]');
+      const pages = document.querySelectorAll('[data-page]');
+      const validPages = ['home', 'gallery', 'services'];
 
-    <p class="inquiry-services">
-      CHARACTER DESIGN · CONCEPT ART · ILLUSTRATION
-    </p>
+      function showPage(name, updateHash) {
+        const pageName = validPages.includes(name) ? name : 'home';
+        pages.forEach((page) => {
+          const active = page.dataset.page === pageName;
+          page.classList.toggle('is-active', active);
+          page.setAttribute('aria-hidden', String(!active));
+        });
+        pageLinks.forEach((link) => {
+          if (!link.matches('.nav-link')) return;
+          if (link.dataset.pageLink === pageName) link.setAttribute('aria-current', 'page');
+          else link.removeAttribute('aria-current');
+        });
+        if (updateHash && window.location.hash !== '#' + pageName) {
+          history.pushState({ page: pageName }, '', '#' + pageName);
+        }
+        window.scrollTo({ top: 0, behavior: 'auto' });
+      }
 
-    <div class="contact-links">
-      <a class="button"
-         href="mailto:Chimamarvex@gmail.com?subject=Creative%20Project%20Inquiry&amp;body=Hi%20Mavex%2C%0A%0AI%27m%20interested%20in%20working%20with%20you.%0A%0AProject%20type%3A%0AProject%20idea%3A%0AWhat%20I%20need%3A%0A%0A">
-        START A PROJECT INQUIRY ↗
-      </a>
+      pageLinks.forEach((link) => {
+        link.addEventListener('click', (event) => {
+          const target = link.dataset.pageLink;
+          if (!target) return;
+          event.preventDefault();
+          showPage(target, true);
+        });
+      });
 
-      <a class="button whatsapp"
-         href="https://wa.me/2347045382139?text=Hi%20Mavex%2C%20I%27m%20interested%20in%20discussing%20a%20creative%20project."
-         target="_blank"
-         rel="noopener noreferrer">
-        LET'S TALK ON WHATSAPP ↗
-      </a>
-    </div>
-  </div>
-</section>
+      window.addEventListener('popstate', () => showPage(window.location.hash.slice(1), false));
+      window.addEventListener('hashchange', () => showPage(window.location.hash.slice(1), false));
+      showPage(window.location.hash.slice(1) || 'home', false);
+      document.getElementById('year').textContent = new Date().getFullYear();
 
+      const filterButtons = document.querySelectorAll('[data-filter]');
+      const galleryItems = document.querySelectorAll('.gallery-item[data-category]');
+      const count = document.getElementById('gallery-count');
+      filterButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          const filter = button.dataset.filter;
+          let visible = 0;
+          filterButtons.forEach((item) => item.setAttribute('aria-pressed', String(item === button)));
+          galleryItems.forEach((item) => {
+            const show = filter === 'all' || item.dataset.category === filter;
+            item.hidden = !show;
+            if (show) visible += 1;
+          });
+          count.textContent = String(visible).padStart(2, '0') + ' projects';
+        });
+      });
 
-
-<footer>© 2026 Mavex King · Independent by nature. Curious by design.</footer>
-</main>
-<script>
-(function () {
-  const track = document.getElementById('processTrack');
-  const slides = Array.from(document.querySelectorAll('.process-slide'));
-  const bars = Array.from(document.querySelectorAll('.process-progress span'));
-  const count = document.getElementById('processCount');
-  const prev = document.getElementById('processPrev');
-  const next = document.getElementById('processNext');
-
-  if (!track || !slides.length || !count || !prev || !next) return;
-
-  function currentIndex() {
-    const width = track.clientWidth || 1;
-    return Math.max(
-      0,
-      Math.min(slides.length - 1, Math.round(track.scrollLeft / width))
-    );
-  }
-
-  function update() {
-    const index = currentIndex();
-
-    count.textContent =
-      String(index + 1).padStart(2, '0') +
-      ' / ' +
-      String(slides.length).padStart(2, '0');
-
-    bars.forEach((bar, i) => {
-      bar.classList.toggle('active', i <= index);
-    });
-  }
-
-  function goTo(index) {
-    const target = Math.max(0, Math.min(slides.length - 1, index));
-
-    track.scrollTo({
-      left: target * track.clientWidth,
-      behavior: 'smooth'
-    });
-  }
-
-  prev.addEventListener('click', () => goTo(currentIndex() - 1));
-  next.addEventListener('click', () => goTo(currentIndex() + 1));
-  track.addEventListener('scroll', update, { passive: true });
-  window.addEventListener('resize', update);
-
-  update();
-})();
+      // Reveal each image only when its matching local file exists; otherwise retain its placeholder.
+      document.querySelectorAll('img[src]').forEach((img) => {
+        if (img.complete && img.naturalWidth > 0) {
+          img.hidden = false;
+          const placeholder = img.parentElement.querySelector('[data-placeholder]');
+          if (placeholder) placeholder.hidden = true;
+        }
+        img.addEventListener('load', () => {
+          img.hidden = false;
+          const placeholder = img.parentElement.querySelector('[data-placeholder]');
+          if (placeholder) placeholder.hidden = true;
+        });
+        img.addEventListener('error', () => { img.hidden = true; });
+      });
+    })();
   </script>
 </body>
 </html>
