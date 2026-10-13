@@ -5,8 +5,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mavex King — Artist & Visual Storyteller</title>
 <style>
-*{box-sizing:border-box}
-body{margin:0;background:#111110;color:#f0eee8;font-family:Arial,sans-serif;line-height:1.6}
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #111110;
+  color: #f0eee8;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  overflow-x: clip;
+}
+
 
 main {
   max-width: 1000px;
@@ -30,13 +45,14 @@ header {
 .orange{color:#f07845}
 
 
+
 .hero {
-  position: relative;margin-top: 0;
-top: 0;
-  width: 100vw;
+  position: relative;
+  margin-top: 0;
+  width: 100%;
+  margin-left: 0;
   min-height: 100vh;
   min-height: 100svh;
-  margin-left: calc(50% - 50vw);
   padding: 110px 8% 38px;
   display: flex;
   flex-direction: column;
@@ -110,7 +126,8 @@ small{color:#f07845;letter-spacing:3px;text-transform:uppercase}
 h1{font-size:clamp(46px,10vw,88px);line-height:1;margin:22px 0;letter-spacing:-3px}
 p{color:#b9b6ae;max-width:650px}
 a{color:#f07845}
-.
+
+
 
 .button {
   display: inline-block;
@@ -126,14 +143,17 @@ a{color:#f07845}
   box-shadow: 0 4px 0 #A8A398, 0 0 12px rgba(184, 189, 196, .12), 0 8px 18px rgba(0, 0, 0, .18);
   transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
 }
+
 .button:hover,
 .button:focus-visible {
   background: #F2EEE6;
   transform: translateY(-2px);
   box-shadow: 0 6px 0 #A8A398, 0 0 20px rgba(184, 189, 196, .22), 0 12px 22px rgba(0, 0, 0, .25);
+}
+
 .button:active {
   transform: translateY(2px);
-  box-shadow: 0 2px 0 #9e4b2c, 0 4px 10px rgba(0,0,0,.18);
+  box-shadow: 0 2px 0 #A8A398, 0 4px 10px rgba(0, 0, 0, .18);
 }
 
   
@@ -265,10 +285,12 @@ h2{font-size:36px;line-height:1.1}
   transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
 }
 
+
+
+
 .card:hover {
-  transform: translateY(-4px);
   border-color: #777D86;
-  box-shadow: 0 10px 28px rgba(184, 189, 196, .10);
+}
 
 
 .card h3 {
@@ -288,19 +310,32 @@ h2{font-size:36px;line-height:1.1}
   border-color: #f07845;
 }
 
+
 @media (max-width: 600px) {
   .grid {
     grid-template-columns: 1fr;
     gap: 14px;
   }
 
+  .gallery {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+
   .card {
+ 
     padding: 25px 22px;
     min-height: 175px;
   }
 }
 
-  
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  width: 100%;
+  min-width: 0;
+}
 
 .gallery figure {
   margin: 0;
@@ -308,64 +343,31 @@ h2{font-size:36px;line-height:1.1}
   background: linear-gradient(145deg, #20201d, #121211);
   border: 1px solid #383632;
   overflow: hidden;
-  transition: border-color 0.25s ease, transform 0.25s ease;
+  transition: border-color .25s ease, transform .25s ease;
 }
 
 .gallery figure:hover {
-  border-color: #f07845;
-  transform: translateY(-4px);
-}
-.gallery figure:hover {
-  border-color: #f07845;
+  border-color: #777D86;
   transform: translateY(-3px);
 }
 
 .gallery img {
   display: block;
   width: 100%;
-  height: 340px;
-  object-fit: contain;
-  background: #111110;
-}
-
-.gallery figcaption {
-  padding: 18px 4px 8px;
-  color: #f0ede6;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1.5;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-}
-
-
-.gallery figure {
-  margin: 0;
-  background: #1c1c19;
-  border: 1px solid #383632;
-}
-
-.gallery img {
-  display: block;
-  width: 100%;
   height: auto;
+  max-height: 500px;
   object-fit: contain;
   background: #0c0c0b;
-  transition: transform 0.35s ease;
+  transition: transform .35s ease;
 }
 
 .gallery figure:hover img {
   transform: scale(1.02);
 }
-.gallery figure:hover img {
-  transform: scale(1.02);
-  }
-
 
 .gallery figcaption {
   padding: 16px 12px 8px;
-  color: #f07845;
+  color: #E7E2D8;
   font-size: 14px;
   font-weight: 600;
   line-height: 1.5;
@@ -378,6 +380,8 @@ h2{font-size:36px;line-height:1.1}
   font-size: 14px;
   line-height: 1.85;
 }
+
+
 footer{padding:25px 0;color:#aaa;border-top:1px solid #383632;font-size:13px}
 /* TIKTOK-INSPIRED CHARACTER PROCESS */
 #character-process > p {
