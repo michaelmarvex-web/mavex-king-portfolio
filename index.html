@@ -251,15 +251,24 @@ h2{font-size:36px;line-height:1.1}
   margin-top: 28px;
 }
 
+
 .card {
   position: relative;
-  background: linear-gradient(145deg, #20201d, #141413 75%);
+  background: linear-gradient(145deg, #24221f, #141413 75%);
   border: 1px solid #393833;
   border-top: 2px solid #f07845;
   padding: 30px 26px;
   min-height: 210px;
-  transition: transform 0.25s ease, border-color 0.25s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, .12);
+  transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
 }
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: #6b4939;
+  box-shadow: 0 10px 28px rgba(240, 120, 69, .12);
+}
+
 
 .card h3 {
   font-size: 23px;
