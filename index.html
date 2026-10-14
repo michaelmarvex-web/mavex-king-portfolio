@@ -183,9 +183,26 @@
     .selected-work { background: #151514; border-top: 1px solid #242420; border-bottom: 1px solid #242420; }
     .work-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
     .work-card { min-width: 0; }
-    .work-image { position: relative; display: grid; min-height: 250px; aspect-ratio: 1.15 / 1; place-items: center; overflow: hidden; border: 1px solid #34342f; background: #1d1d1a; }
+    
+.work-image {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+}
+
     .work-image .art-placeholder { position: absolute; }
-    .work-image img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; background: #111110; }
+    
+.work-image img {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  background: transparent;
+}
+
     .work-info { display: flex; align-items: start; justify-content: space-between; gap: 16px; padding-top: 17px; }
     .work-info h3 { margin-bottom: 5px; font-size: 15px; font-weight: 500; }
     .work-info p { margin-bottom: 0; color: var(--soft); font-size: 11px; }
@@ -213,13 +230,15 @@
     .gallery-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(24px, 3vw, 38px) 22px; padding-bottom: 90px; }
     .gallery-item { min-width: 0; margin: 0; }
     
+
 .gallery-visual {
   position: relative;
   display: block;
   overflow: hidden;
-  border: 1px solid #33332e;
-  background: #1a1a18;
+  border: none;
+  background: transparent;
 }
+
 
     
 .gallery-visual.portrait,
@@ -302,9 +321,7 @@
       .hero-description { max-width: 330px; font-size: 14px; }
       .hero-meta { font-size: 9px; }
       .work-grid, .gallery-grid { grid-template-columns: minmax(0, 1fr); }
-      .work-image { aspect-ratio: 1 / 1; }
-      .gallery-visual { aspect-ratio: 4 / 3; }
-      .gallery-visual.portrait { aspect-ratio: 4 / 5; }
+      
       .footer-inner { align-items: start; flex-direction: column; }
       .button { min-height: 42px; padding: 10px 14px; }
     }
