@@ -86,6 +86,21 @@
     .page { display: none; animation: page-in .28s ease both; }
     .page.is-active { display: block; }
     @keyframes page-in { from { opacity: .65; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+    
+/* Gentle scroll reveals */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity .7s ease,
+    transform .7s ease;
+}
+
+.scroll-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
     .hero {
       position: relative;
