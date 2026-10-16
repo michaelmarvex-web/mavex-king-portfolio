@@ -546,6 +546,41 @@
       const pageLinks = document.querySelectorAll('[data-page-link]');
       const pages = document.querySelectorAll('[data-page]');
       const validPages = ['home', 'gallery', 'services'];
+      
+const revealObserver = 'IntersectionObserver' in window
+  ? new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.12,
+      rootMargin: '0px 0px -35px 0px'
+    })
+  : null;
+
+function setupScrollReveal() {
+  if (!revealObserver) return;
+
+  revealObserver.disconnect();
+
+  const activePage = document.querySelector('.page.is-active');
+  if (!activePage) return;
+
+  activePage.querySelectorAll('.section, .contact-band').forEach((section) => {
+    section.classList.remove('scroll-reveal', 'is-visible');
+    section.classList.add('scroll-reveal');
+
+    if (section.getBoundingClientRect().top < window.innerHeight * 0.9) {
+      section.classList.add('is-visible');
+    } else {
+      revealObserver.observe(section);
+    }
+  });
+}
+
 
       function showPage(name, updateHash) {
         const pageName = validPages.includes(name) ? name : 'home';
@@ -562,8 +597,12 @@
         if (updateHash && window.location.hash !== '#' + pageName) {
           history.pushState({ page: pageName }, '', '#' + pageName);
         }
-        window.scrollTo({ top: 0, behavior: 'auto' });
-      }
+        
+window.scrollTo({ top: 0, behavior: 'auto' });
+requestAnimationFrame(setupScrollReveal);
+}
+
+      
 
       pageLinks.forEach((link) => {
         link.addEventListener('click', (event) => {
