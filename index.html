@@ -363,7 +363,89 @@
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
     }
-  </style>
+  
+/* Project enquiry form */
+.enquiry-details {
+  width: 100%;
+  min-width: 0;
+  margin: 24px 0;
+  color: #e7e2d8;
+}
+
+.enquiry-details summary {
+  cursor: pointer;
+  padding: 16px 18px;
+  border: 1px solid #555650;
+  color: #e7e2d8;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+#project-enquiry-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  min-width: 0;
+  margin-top: 20px;
+}
+
+#project-enquiry-form label,
+#project-enquiry-form > p {
+  display: block;
+  margin: 12px 0 2px;
+  color: #c7c9c8;
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+#project-enquiry-form input,
+#project-enquiry-form select,
+#project-enquiry-form textarea {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  padding: 13px 14px;
+  border: 1px solid #494a45;
+  border-radius: 3px;
+  background: #1b1c19;
+  color: #e7e2d8;
+  font: inherit;
+  font-size: 0.95rem;
+}
+
+#project-enquiry-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+#project-enquiry-form input::placeholder,
+#project-enquiry-form textarea::placeholder {
+  color: #a5a49d;
+  opacity: 1;
+}
+
+#project-enquiry-form select {
+  color-scheme: dark;
+}
+
+#project-enquiry-form button {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  margin-top: 6px;
+}
+
+#project-enquiry-form input:focus,
+#project-enquiry-form select:focus,
+#project-enquiry-form textarea:focus {
+  outline: 2px solid #c7c9c8;
+  outline-offset: 2px;
+}
+</style>
 </head>
 <body>
   <div class="site-shell">
