@@ -890,6 +890,56 @@ requestAnimationFrame(setupScrollReveal);
       window.addEventListener('hashchange', () => showPage(window.location.hash.slice(1), false));
       showPage(window.location.hash.slice(1) || 'home', false);
       document.getElementById('year').textContent = new Date().getFullYear();
+            // Prepare project enquiries for email or WhatsApp.
+      const enquiryForm = document.getElementById('project-enquiry-form');
+
+      function sendProjectEnquiry(method) {
+        if (!enquiryForm.reportValidity()) return;
+
+        const projectType = document.getElementById('project-type').value;
+        const projectPurpose = document.getElementById('project-purpose').value;
+        const projectGoal = document.getElementById('project-goal').value.trim();
+        const projectReferences = document.getElementById('project-references').value.trim();
+        const projectTimeline = document.getElementById('project-timeline').value;
+        const projectExtra = document.getElementById('project-extra').value.trim();
+
+        const message = [
+          'Hi Mavex,',
+          '',
+          "I'd like to discuss a creative project with you.",
+          '',
+          'Project type: ' + projectType,
+          'Project purpose: ' + projectPurpose,
+          'Project goal: ' + projectGoal,
+          'Ideas and references: ' + (projectReferences || 'Not provided'),
+          'Timeline: ' + projectTimeline,
+          'Additional details: ' + (projectExtra || 'Not provided'),
+          '',
+          'Looking forward to hearing from you.'
+        ].join('\n');
+
+        if (method === 'email') {
+          const subject = 'Creative Project Enquiry - ' + projectType;
+          const emailUrl = 'mailto:Chimamarvex@gmail.com?subject='
+            + encodeURIComponent(subject)
+            + '&body=' + encodeURIComponent(message);
+
+          window.location.href = emailUrl;
+        } else {
+          const whatsappUrl = 'https://wa.me/2347045382139?text='
+            + encodeURIComponent(message);
+
+          window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+        }
+      }
+
+      document.getElementById('send-enquiry-email').addEventListener('click', function () {
+        sendProjectEnquiry('email');
+      });
+
+      document.getElementById('send-enquiry-whatsapp').addEventListener('click', function () {
+        sendProjectEnquiry('whatsapp');
+      });
 
       const filterButtons = document.querySelectorAll('[data-filter]');
       const galleryItems = document.querySelectorAll('.gallery-item[data-category]');
