@@ -916,7 +916,7 @@
   <h2>Every project is different.</h2>
   <p>Pricing depends on the scope of the work, its complexity, the timeline and how the final artwork will be used.</p>
   <p>Share what you're planning, and I'll review your brief and provide a tailored quote before we commit to anything.</p>
-<a class="button" href="#project-enquiry-form" data-page-link="home">Let's Make It Happen</a>
+<a class="button" id="pricing-enquiry-link" href="#project-enquiry-form" data-page-link="home">Let's Make It Happen</a>
           </section>
           <section class="section" style="padding-bottom:76px">
             <div class="section-kicker">How we work</div>
@@ -1005,7 +1005,23 @@ requestAnimationFrame(setupScrollReveal);
           showPage(target, true);
         });
       });
+// Open the enquiry form when visitors use the pricing button.
+const pricingEnquiryLink = document.getElementById('pricing-enquiry-link');
 
+pricingEnquiryLink.addEventListener('click', () => {
+  const enquiryDetails = document.getElementById('project-enquiry-details');
+
+  if (!enquiryDetails) return;
+
+  enquiryDetails.open = true;
+
+  requestAnimationFrame(() => {
+    enquiryDetails.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  });
+});
       window.addEventListener('popstate', () => showPage(window.location.hash.slice(1), false));
       window.addEventListener('hashchange', () => showPage(window.location.hash.slice(1), false));
       showPage(window.location.hash.slice(1) || 'home', false);
