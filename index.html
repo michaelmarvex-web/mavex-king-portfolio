@@ -467,7 +467,35 @@
 /* Avoid duplicate buttons while the form is open */
 .enquiry-details[open] + .contact-actions {
   display: none;
-    }</style>
+    }/* Project pricing panel */
+.pricing-panel {
+  margin: 0 0 76px;
+  padding: 28px 24px;
+  border: 1px solid #494a45;
+  border-radius: 12px;
+  background: #1b1c19;
+  color: #e7e2d8;
+}
+
+.pricing-panel h2 {
+  margin: 12px 0 16px;
+  font-size: clamp(1.6rem, 5vw, 2.2rem);
+  line-height: 1.2;
+}
+
+.pricing-panel p {
+  max-width: 620px;
+  color: #c7c9c8;
+  line-height: 1.7;
+  margin: 0 0 14px;
+}
+
+.pricing-panel .button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  }</style>
 </head>
 <body>
   <div class="site-shell">
@@ -883,6 +911,13 @@
             <article class="service-row"><div class="service-index">04</div><div class="service-main"><h2>Film & Animation Development</h2><p>Creative collaboration on visual storytelling, character-led concepts and early development materials for projects moving toward film or animation.</p></div><div class="service-detail"><span>Good for</span>Independent creators · Small teams · Early-stage projects</div></article>
           </div>
 
+          <section class="pricing-panel">
+  <div class="section-kicker">PROJECT PRICING</div>
+  <h2>Every project is different.</h2>
+  <p>Pricing depends on the scope of the work, its complexity, the timeline and how the final artwork will be used.</p>
+  <p>Share what you're planning, and I'll review your brief and provide a tailored quote before we commit to anything.</p>
+  <a class="button" href="#page-home">Let's Make It Happen <span aria-hidden="true">↗</span></a>
+          </section>
           <section class="section" style="padding-bottom:76px">
             <div class="section-kicker">How we work</div>
             <h2 class="section-title">Clear steps. Thoughtful work.</h2>
